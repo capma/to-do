@@ -1,6 +1,6 @@
 table {
     border: 1px solid black;
-    width: 50%;
+    width: 300px;
 }
 
 th {
@@ -13,4 +13,15 @@ td {
 
 .functions {
     margin-bottom: 5px;
+}
+
+.column {
+    float: left;
+    width: 50%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
