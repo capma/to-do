@@ -1,50 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./mycss.css">
-    <title>Document</title>
-</head>
-<body>
-    <h2>This is my to-do project!</h2>
-    <input type="text" id="new-task-input">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./mycss.css" />
+    <title>Todo List</title>
+  </head>
+  <body>
+    <h2>Todo List</h2>
+    <input type="text" id="new-task-input" />
     <button id="btn-add">Add new task</button>
-    
+
     <p></p>
 
     <div class="functions">
-        <button id="btn-sort-tasks">Sort tasks</button>
-        <button id="btn-clear-tasks">Clear tasks</button>
+      <button id="btn-sort-tasks">Sort tasks</button>
+      <button id="btn-clear-tasks">Clear tasks</button>
     </div>
-    
-    <div class="row">
-        <div id="tasks" class="column">
-            <table class="table table-bordered">
-                <thead class="alert-info">
-                    <tr>
-                        <th>Task</th>
-                    </tr>
-                </thead>
-                <tbody id="result">
-                </tbody>
-            </table>
-        </div>
 
-        <div id="deleted-tasks" class="column"  >
-            <table class="table table-bordered">
-                <thead class="alert-info">
-                    <tr>
-                        <th>Task</th>
-                    </tr>
-                </thead>
-                <tbody id="result">
-                </tbody>
-            </table>
-        </div>
+    <div class="row">
+      <div id="tasks" class="column">
+        <table class="table table-bordered">
+          <thead class="alert-info">
+            <tr>
+              <th>Todo</th>
+            </tr>
+          </thead>
+          <tbody id="result" draggable="true" ondragstart="drag(event)"></tbody>
+        </table>
+      </div>
+
+      <div id="deleted-tasks" class="column">
+        <table
+          id="done"
+          class="table table-bordered"
+          ondrop="drop(event)"
+          ondragover="allowDrop(event)"
+        >
+          <thead class="alert-info">
+            <tr>
+              <th>Done</th>
+            </tr>
+          </thead>
+          <tbody id="result"></tbody>
+        </table>
+      </div>
     </div>
-    
-</body>
-<script src="myjavascript.js"></script>
+  </body>
+  <script src="myjavascript.js"></script>
 </html>

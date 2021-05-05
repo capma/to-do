@@ -1,30 +1,30 @@
 table {
-    border: 1px solid black;
-    /* background: gray; */
-    width: 100%
+  border: 1px solid black;
+  /* background: gray; */
+  width: 100%;
 }
 
 th {
-    background-color: tomato;
-    border: 1px solid black;
+  background-color: darkslategrey;
+  border: 1px solid black;
+  color: white;
 }
 
 td {
-    border: 1px solid black;
+  border: 1px solid black;
 }
 
 .functions {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 .column {
-    float: left;
-    width: 50%;
-
+  float: left;
+  width: 49%;
 }
 
 .row:after {
-    content: "";
-    display: table;
-    clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
